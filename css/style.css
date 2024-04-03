@@ -1,4 +1,7 @@
 .btn
 {
     margin: 10px;
+    color: blue;
+    border: 2cm;
+    /* margin: 5%; */
 }
