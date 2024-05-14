@@ -5,3 +5,14 @@
     /* border: 2cm; */
     /* margin: 5%; */
 }
+
+body {
+    background-color: #170d0d;
+    border: 5%;
+    margin: 25%;
+    /* margin-right: 50%; */
+}
+
+h3,h1{
+    color: #f1ebeb;
+  }
