@@ -1,0 +1,44 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ldo-adhoc-prerun
+  namespace: bia-ds-dev
+spec:
+  completions: 1
+  parallelism: 1
+  backoffLimit: 0 # Jobs are immutable, field is valid but needs to be assigned to new job
+  template:
+    metadata:
+      labels:
+        app.lrl.lilly.com/compute: serverless
+        app.kubernetes.io/name: ldo-nextflow-adhoc
+    spec:
+      serviceAccountName: bia-ds
+      restartPolicy: Never    
+      containers:
+      - name: ldo-nextflow-adhoc
+        image: 283234040926.dkr.ecr.us-east-2.amazonaws.com/dynamic_targeting:mlops_wip-sha-3a8eba74113c
+        command: ["nextflow", "run", "dt-prerun-pipelines.nf", "-c", "/ldo/work/nextflow.config", "-profile", "prod_neutral"]
+        #args: ["--brand1", "mounjaro", "--brand2", "zepbound", "--brand3", "jardiance"]
+        env:
+          - name: NXF_WORK
+            value: "/bia-ds-dt-ldo-data/work"
+          - name: POD_NAME
+            valueFrom:
+              fieldRef: 
+                fieldPath: metadata.name
+        volumeMounts:
+        - name: bia-ds-dt-ldo-data
+          mountPath: /bia-ds-dt-ldo-data/work
+        - name: ldo-nextflow-configmap
+          mountPath: /ldo/work    
+      volumes:
+      - name: bia-ds-dt-ldo-data
+        persistentVolumeClaim:
+          claimName: bia-ds-dt-ldo-data
+      - name: ldo-nextflow-configmap
+        configMap:
+          name: ldo-nextflow-configmap
+          items:
+          - key: nextflow.config
+            path: nextflow.config
