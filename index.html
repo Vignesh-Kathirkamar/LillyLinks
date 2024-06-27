@@ -4,7 +4,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Lilly Links</title>
     <link rel="icon" type="image/x-icon" href="/images/LillyLogo_White.png">
-
+    <script src="copytoclipboard.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
 </head>
 <body>
     <div class="p-3 mb-2 homepage">
@@ -51,4 +53,37 @@
             <a href= "https://mydrive.lilly.com/:x:/g/personal/mishra_prabhat1_lilly_com/ESlyPEh6fgRIlixdwvd5SVEBCXLlGVnW3-OJvy9qDlIZHg?e=YvybZT" class="btn btn-primary" role="button" aria-pressed="true" target=”_blankm4” > MLOPs_team_experience </a>
             <a href= "https://mydrive.lilly.com/:x:/g/personal/mishra_prabhat1_lilly_com/EZkQ-zt9r9pOrKP7ig_zU5wBO_8-nFKjtcRvesjL2QDUsw?e=V3cqgW" class="btn btn-primary" role="button" aria-pressed="true" target=”_blankm5” > MLOPs_Tracker </a>
             <a href= "https://mydrive.lilly.com/:x:/g/personal/mishra_prabhat1_lilly_com/ES-YVx1rB99Ok_Tp9_47lZcB37Em6mMLAXoFyWPXiN8ubg?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1715673400308&web=1" class="btn btn-primary" role="button" aria-pressed="true" target=”_blankm5” > MLOPs_Vacation_Tracker </a>
+
+        <h3> Obtaining token from SSO for AWS </h3>
+
+        <div class="copy-container">
+            <p id="myText">
+                export AWS_PROFILE=light-p
+            </p>
+            <!-- Use an icon for the copy action -->
+            <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
+        </div>
+        <div class="copy-container">
+            <p id="myText">
+                aws sso login --sso-session lilly --no-browser 
+            </p>
+            <!-- Use an icon for the copy action -->
+            <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
+        </div>
+        <div class="copy-container">
+            <p id="myText">
+                aws sts get-caller-identity
+            </p>
+            <!-- Use an icon for the copy action -->
+            <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
+        </div>
+        <div class="copy-container">
+            <p id="myText">
+                aws eks update-kubeconfig --name Light-Infra --region us-east-2 --alias light-p --profile light-p --user-alias light-p 
+            </p>
+            <!-- Use an icon for the copy action -->
+            <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
+        </div>  
+
+
 </body>

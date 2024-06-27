@@ -17,3 +17,28 @@ body {
 h3,h1{
     color: #f1ebeb;
   }
+
+p {
+    color: black;
+
+}
+
+.copy-container {
+    display: flex;
+    align-self: auto;    
+    background-color: #eed6d6; /* Light gray background */
+    padding: 5px; /* Padding around the text and icon */
+    display: inline-flex; /* Use inline-flex to make the box fit content */
+    vertical-align: middle; /* Center items vertically */
+    border-radius: 5px; /* Rounded corners */
+    height:auto;
+    margin-bottom: 10px;
+}
+
+.copy-icon {
+    margin-left: 50px; /* Adjust margin to create space between text and icon */
+    cursor: pointer;
+    font-size: 20px;
+    order: 2; /* Adjust the order to move the icon to the right */
+    color: black;
+}
