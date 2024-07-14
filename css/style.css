@@ -23,7 +23,43 @@ p {
 
 }
 
-.copy-container {
+.copy-container1 {
+    display: flex;
+    align-self: auto;    
+    background-color: #eed6d6; /* Light gray background */
+    padding: 5px; /* Padding around the text and icon */
+    display: inline-flex; /* Use inline-flex to make the box fit content */
+    vertical-align: middle; /* Center items vertically */
+    border-radius: 5px; /* Rounded corners */
+    height:auto;
+    margin-bottom: 10px;
+}
+
+.copy-container2 {
+    display: flex;
+    align-self: auto;    
+    background-color: #eed6d6; /* Light gray background */
+    padding: 5px; /* Padding around the text and icon */
+    display: inline-flex; /* Use inline-flex to make the box fit content */
+    vertical-align: middle; /* Center items vertically */
+    border-radius: 5px; /* Rounded corners */
+    height:auto;
+    margin-bottom: 10px;
+}
+
+.copy-container3 {
+    display: flex;
+    align-self: auto;    
+    background-color: #eed6d6; /* Light gray background */
+    padding: 5px; /* Padding around the text and icon */
+    display: inline-flex; /* Use inline-flex to make the box fit content */
+    vertical-align: middle; /* Center items vertically */
+    border-radius: 5px; /* Rounded corners */
+    height:auto;
+    margin-bottom: 10px;
+}
+
+.copy-container4 {
     display: flex;
     align-self: auto;    
     background-color: #eed6d6; /* Light gray background */

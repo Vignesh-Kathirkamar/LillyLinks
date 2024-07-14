@@ -56,28 +56,28 @@
 
         <h3> Obtaining token from SSO for AWS </h3>
 
-        <div class="copy-container">
+        <div class="copy-container1">
             <p id="myText">
                 export AWS_PROFILE=light-p
             </p>
             <!-- Use an icon for the copy action -->
             <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
         </div>
-        <div class="copy-container">
+        <div class="copy-container2">
             <p id="myText">
                 aws sso login --sso-session lilly --no-browser 
             </p>
             <!-- Use an icon for the copy action -->
             <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
         </div>
-        <div class="copy-container">
+        <div class="copy-container3">
             <p id="myText">
                 aws sts get-caller-identity
             </p>
             <!-- Use an icon for the copy action -->
             <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
         </div>
-        <div class="copy-container">
+        <div class="copy-container4">
             <p id="myText">
                 aws eks update-kubeconfig --name Light-Infra --region us-east-2 --alias light-p --profile light-p --user-alias light-p 
             </p>
